@@ -18,5 +18,14 @@ It’s basically what you see in the phone app (nodes + map), but handy on a des
 
 ### 1) Clone
 ```bash
-git clone https://github.com/<YOUR_GITHUB_USER>/meshy-dashboard.git
+git clone https://github.com/turbo399/meshy-dashboard.git
 cd meshy-dashboard
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+export RADIO_HOST=<YOUR_MESH_DEVICE_IP_HERE>
+python app.py
+
+http://<pi-ip>:5001 (Meshy-Dasboard)
+
