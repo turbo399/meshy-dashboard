@@ -4,7 +4,6 @@
 ### Node table
 ![Map view](screenshots/Screenshot%20from%202025-12-31%2018-11-13.png)
 
-![Node table](screenshots/Screenshot%20from%202025-12-31%2018-10-53.png)
 ### Map view
 ![Node table](screenshots/Screenshot%20from%202025-12-31%2018-10-53.png)
 
