@@ -26,7 +26,7 @@ It’s basically the same “Nodes + Map” view you see in the phone app — bu
 
 - Linux (tested on Raspberry Pi OS / Debian)(Raspberry Pi Zero W 32bit)
 - Python 3.9+ (3.11 is fine)
-- A working Meshtastic CLI install (or venv path)
+- A working Meshtastic CLI install (or venv path) (See bottom of page)
 - Network access to your Meshtastic device / gateway IP
 
 ## Quick start
@@ -42,4 +42,24 @@ pip install -r requirements.txt
 #open in browser
 http://<pi-ip>:5001 (Meshy-Dasboard)
 
+### Meshtastic CLI
+
+Meshy Dashboard uses the Meshtastic CLI.
+
+Install (system-wide):
+
+    pip install meshtastic
+
+Or in a virtual environment:
+
+    python3 -m venv ~/meshtastic-venv
+    source ~/meshtastic-venv/bin/activate
+    pip install meshtastic
+
+If installed in a venv, set:
+
+    export MESHTASTIC_BIN=~/meshtastic-venv/bin/meshtastic
+
+Official docs:
+https://meshtastic.org/docs/software/python/cli/
 
