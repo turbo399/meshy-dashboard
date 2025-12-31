@@ -1,40 +1,47 @@
 # Meshy Dashboard (Meshtastic Local UI)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](#requirements)
+[![Flask](https://img.shields.io/badge/Flask-Web%20UI-black.svg)](#)
+[![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi%20%7C%20Linux-lightgrey.svg)](#)
+
+A desktop-friendly **Meshtastic node list + map** you can run on your LAN (e.g. on a Raspberry Pi gateway).
+It’s basically the same “Nodes + Map” view you see in the phone app — but on a bigger screen, so you don’t need to keep your phone open while working at a desk.
+
 ## Screenshots
 
-### Node table
-![Map view](screenshots/Screenshot%20from%202025-12-31%2018-11-13.png)
+**Node table**
+![Node table](screenshots/node-table.png)
 
-### Map view
-![Node table](screenshots/Screenshot%20from%202025-12-31%2018-10-53.png)
-
-
-A desktop-friendly **Meshtastic node list + map** (Flask web UI) for use on a LAN.
-It’s basically what you see in the phone app (nodes + map), but handy on a desk screen without needing your phone.
+**Map view**
+![Map view](screenshots/map.png)
 
 ## Features
-- Live node table using `meshtastic --nodes`
-- Status buckets: **Active / Stale / Missing** based on RF "LastHeard/Since"
-- Map view with node markers + popups
-- Uses your local Meshtastic radio (via IP host)
+
+- Live **node table** from `meshtastic --nodes`
+- **Map view** (Leaflet) using node latitude/longitude
+- Status classification (active / stale / missing) based on “last heard”
+- Runs locally on a LAN (no cloud required)
+- Systemd service example included (auto-start on boot)
 
 ## Requirements
-- Linux (tested on Raspberry Pi Zero W (single core) on trixie version of raspberry pi OS)
-- Python 3
-- Meshtastic CLI installed and working against your radio
+
+- Linux (tested on Raspberry Pi OS / Debian)
+- Python 3.9+ (3.11 is fine)
+- A working Meshtastic CLI install (or venv path)
+- Network access to your Meshtastic device / gateway IP
 
 ## Quick start
 
-### 1) Clone
 ```bash
 git clone https://github.com/turbo399/meshy-dashboard.git
 cd meshy-dashboard
+
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
-export RADIO_HOST=<YOUR_MESH_DEVICE_IP_HERE>
-python app.py
-
+#open in browser
 http://<pi-ip>:5001 (Meshy-Dasboard)
 
 
