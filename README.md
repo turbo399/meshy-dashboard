@@ -2,10 +2,10 @@
 ## Screenshots
 
 ### Node table
-![Node table]('Screenshot from 2025-12-31 18-10-53.png')
+![Node table](screenshots/Screenshot%20from%202025-12-31%2018-10-53.png)
 
 ### Map view
-![Map view]('Screenshot from 2025-12-31 18-11-13.png')
+![Map view](screenshots/Screenshot%20from%202025-12-31%2018-11-13.png)
 
 
 #'Screenshot from 2025-12-31 18-10-53.png'
