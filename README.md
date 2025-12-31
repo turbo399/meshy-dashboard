@@ -2,7 +2,7 @@
 ## Screenshots
 
 ### Node table
-![Node table](screenshots/Screenshot from 2025-12-31 18-10-53.png)
+![Node table](2025-12-31 18-10-53.png)
 
 
 A desktop-friendly **Meshtastic node list + map** (Flask web UI) for use on a LAN.
