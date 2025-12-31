@@ -1,4 +1,16 @@
 # Meshy Dashboard (Meshtastic Local UI)
+## Screenshots
+## Screenshots
+
+### Node table
+![Node table]('Screenshot from 2025-12-31 18-10-53.png')
+
+### Map view
+![Map view]('Screenshot from 2025-12-31 18-11-13.png')
+
+
+#'Screenshot from 2025-12-31 18-10-53.png'
+#'Screenshot from 2025-12-31 18-11-13.png'
 
 
 A desktop-friendly **Meshtastic node list + map** (Flask web UI) for use on a LAN.
