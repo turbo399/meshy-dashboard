@@ -1,5 +1,4 @@
 # Meshy Dashboard (Meshtastic Local UI)
-## Screenshots
 
 
 A desktop-friendly **Meshtastic node list + map** (Flask web UI) for use on a LAN.
