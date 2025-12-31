@@ -1,6 +1,5 @@
 # Meshy Dashboard (Meshtastic Local UI)
 ## Screenshots
-## Screenshots
 
 ### Node table
 ![Node table]('Screenshot from 2025-12-31 18-10-53.png')
