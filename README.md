@@ -11,11 +11,9 @@ It’s basically the same “Nodes + Map” view you see in the phone app — bu
 ## Screenshots
 
 **Node table**
-![Node table](screenshots/Screenshot%20from%202025-12-31%2018-10-53.png)
-
+![Table view](screenshots/Screenshot%20from%202025-12-31%2018-11-13.png)
 **Map view**
-![Map view](screenshots/Screenshot%20from%202025-12-31%2018-11-13.png)
-
+![Map view](screenshots/Screenshot%20from%202025-12-31%2018-10-53.png)
 ## Features
 
 - Live **node table** from `meshtastic --nodes`
