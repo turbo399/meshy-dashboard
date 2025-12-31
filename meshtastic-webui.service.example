@@ -1,0 +1,15 @@
+[Unit]
+Description=Meshtastic Local Web UI
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/meshy/meshtastic-local-ui
+Environment=RADIO_HOST=192.168.1.192
+Environment=REFRESH_SECONDS=20
+Environment=MESHTASTIC_BIN=/home/meshy/meshtastic-venv/bin/meshtastic
+ExecStart=/home/meshy/meshtastic-local-ui/venv/bin/python /home/meshy/meshtastic-local-ui/app.py
+Restart=always
+
+[Install]
+WantedBy=default.target

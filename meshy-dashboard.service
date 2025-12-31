@@ -1,0 +1,15 @@
+[Unit]
+Description=Meshy Dashboard (Meshtastic Local UI)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=meshy
+WorkingDirectory=/home/meshy/meshy-dashboard
+Environment=RADIO_HOST=192.168.1.192
+ExecStart=/home/meshy/meshy-dashboard/venv/bin/python /home/meshy/meshy-dashboard/app.py
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

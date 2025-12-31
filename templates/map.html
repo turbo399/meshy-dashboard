@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="{{ refresh }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ app_name }} - Map</title>
+
+  <link rel="stylesheet" href="/leaflet/leaflet.css">
+  <script src="/leaflet/leaflet.js"></script>
+
+  <style>
+    :root{--bg:#070b12; --text:#e8eefc; --muted:#9fb0d0; --border:rgba(255,255,255,0.10);}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; background:var(--bg); color:var(--text);}
+    .bar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:14px 18px;border-bottom:1px solid var(--border);background:rgba(0,0,0,0.25)}
+    .pill{display:inline-flex;gap:10px;align-items:center;padding:8px 12px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:14px}
+    .btn{padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:rgba(0,0,0,0.25);color:var(--text);text-decoration:none;font-size:14px}
+    #map{height: calc(100vh - 64px); width: 100%;}
+    .hint{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.55);border:1px solid var(--border);padding:8px 10px;border-radius:10px;color:var(--muted);font-size:12px;z-index:9999}
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <div class="pill">
+      <b>Meshtastic Map</b>
+      <span>Radio: <b>{{ radio }}</b></span>
+      <span>Updated: <b>{{ updated or "—" }}</b></span>
+      <span>Refresh: <b>{{ refresh }}s</b></span>
+    </div>
+    <div>
+      <a class="btn" href="/">Mesh</a>
+      <a class="btn" href="/map">Map</a>
+    </div>
+  </div>
+
+  <div id="map"></div>
+  <div class="hint">Local-only Leaflet. Markers work even without internet/tiles.</div>
+
+  <script>
+    if (typeof L === "undefined") {
+      document.getElementById("map").innerHTML =
+        "<div style='padding:18px;color:#e8eefc'>Leaflet not found. Install local leaflet assets (see README).</div>";
+    } else {
+      const nodes = {{ nodes | tojson }};
+
+      let center = [52.2407, -0.9023];
+      for (const n of nodes) { if (n.lat !== null && n.lon !== null) { center = [n.lat, n.lon]; break; } }
+
+      const map = L.map("map", { zoomControl: true }).setView(center, 12);
+
+      // Standard OpenStreetMap tiles (internet required for background)
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      {
+       maxZoom: 19,
+       attribution: "&copy; OpenStreetMap contributors"
+      }
+    ).addTo(map);
+
+      const markers = [];
+      for (const n of nodes) {
+        if (n.lat === null || n.lon === null) continue;
+        const label = (n.AKA || n.User || n.ID || "node");
+        const popup = `
+          <div style="min-width:220px">
+            <b>${label}</b><br/>
+            <span style="opacity:.85">${n.Hardware || "N/A"}</span><br/>
+            <div style="margin-top:6px">
+              <b>Status:</b> ${n.status || "missing"}<br/>
+              <b>Since:</b> ${n.Since || "N/A"}<br/>
+              <b>SNR:</b> ${n.SNR || "N/A"} &nbsp; <b>Hops:</b> ${n.Hops || "N/A"}
+            </div>
+            ${n.gmap ? `<div style="margin-top:8px"><a href="${n.gmap}" target="_blank" rel="noreferrer">Open in Google Maps</a></div>` : ""}
+          </div>`;
+        const m = L.marker([n.lat, n.lon]).bindPopup(popup);
+        m.addTo(map);
+        markers.push(m);
+      }
+
+      if (markers.length) {
+        const group = L.featureGroup(markers);
+        map.fitBounds(group.getBounds().pad(0.15));
+      }
+    }
+  </script>
+</body>
+</html>

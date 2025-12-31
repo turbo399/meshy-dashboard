@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# OS/editor junk
+.DS_Store
+*.swp
+*.swo
+
+# Local data (if any)
+data/*.json
+data/*.csv
+
+# Logs
+*.log
