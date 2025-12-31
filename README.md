@@ -11,10 +11,10 @@ It’s basically the same “Nodes + Map” view you see in the phone app — bu
 ## Screenshots
 
 **Node table**
-![Node table](screenshots/node-table.png)
+![Node table](screenshots/Screenshot%20from%202025-12-31%2018-10-53.png)
 
 **Map view**
-![Map view](screenshots/map.png)
+![Map view](screenshots/Screenshot%20from%202025-12-31%2018-11-13.png)
 
 ## Features
 
