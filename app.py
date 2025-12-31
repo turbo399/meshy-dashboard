@@ -27,7 +27,7 @@ APP_NAME = "Meshtastic Local UI"
 VERSION = "0.2.0"
 
 # ---- Config (env overrides) ----
-RADIO_HOST = os.environ.get("RADIO_HOST", "192.168.1.192")
+RADIO_HOST = os.environ.get("RADIO_HOST", "YOUR_IP")
 REFRESH_SECONDS = int(os.environ.get("REFRESH_SECONDS", "200"))
 LISTEN_HOST = os.environ.get("LISTEN_HOST", "0.0.0.0")
 LISTEN_PORT = int(os.environ.get("LISTEN_PORT", "5001"))
