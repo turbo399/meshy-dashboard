@@ -7,6 +7,16 @@
 
 A desktop-friendly **Meshtastic node list + map** you can run on your LAN (e.g. on a Raspberry Pi gateway).
 It’s basically the same “Nodes + Map” view you see in the phone app — but on a bigger screen, so you don’t need to keep your phone open while working at a desk.
+### Quick start
+
+```bash
+git clone https://github.com/turbo399/meshy-dashboard.git
+cd meshy-dashboard
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+export RADIO_HOST=192.168.1.192
+python app.py
 
 ## Screenshots
 
