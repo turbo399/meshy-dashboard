@@ -1,4 +1,9 @@
 # Meshy Dashboard (Meshtastic Local UI)
+## Screenshots
+
+### Node table
+![Node table](screenshots/Screenshot from 2025-12-31 18-10-53.png)
+
 
 A desktop-friendly **Meshtastic node list + map** (Flask web UI) for use on a LAN.
 It’s basically what you see in the phone app (nodes + map), but handy on a desk screen without needing your phone.
