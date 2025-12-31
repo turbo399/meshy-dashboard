@@ -24,7 +24,7 @@ It’s basically the same “Nodes + Map” view you see in the phone app — bu
 
 ## Requirements
 
-- Linux (tested on Raspberry Pi OS / Debian)
+- Linux (tested on Raspberry Pi OS / Debian)(Raspberry Pi Zero W 32bit)
 - Python 3.9+ (3.11 is fine)
 - A working Meshtastic CLI install (or venv path)
 - Network access to your Meshtastic device / gateway IP
