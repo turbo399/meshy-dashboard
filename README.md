@@ -4,13 +4,6 @@
 ### Node table
 ![Node table](screenshots/Screenshot%20from%202025-12-31%2018-10-53.png)
 
-### Map view
-![Map view](screenshots/Screenshot%20from%202025-12-31%2018-11-13.png)
-
-
-#'Screenshot from 2025-12-31 18-10-53.png'
-#'Screenshot from 2025-12-31 18-11-13.png'
-
 
 A desktop-friendly **Meshtastic node list + map** (Flask web UI) for use on a LAN.
 It’s basically what you see in the phone app (nodes + map), but handy on a desk screen without needing your phone.
@@ -41,3 +34,5 @@ python app.py
 
 http://<pi-ip>:5001 (Meshy-Dasboard)
 
+### Map view
+![Map view](screenshots/Screenshot%20from%202025-12-31%2018-11-13.png)
