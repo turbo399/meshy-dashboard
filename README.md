@@ -18,7 +18,7 @@ It’s basically what you see in the phone app (nodes + map), but handy on a des
 - Uses your local Meshtastic radio (via IP host)
 
 ## Requirements
-- Linux (tested on Raspberry Pi OS)
+- Linux (tested on Raspberry Pi Zero W (single core) on trixie version of raspberry pi OS)
 - Python 3
 - Meshtastic CLI installed and working against your radio
 
