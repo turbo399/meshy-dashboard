@@ -1,0 +1,9 @@
+### Docker run
+
+```bash
+docker build -t meshy-dashboard .
+docker run -d --name meshy-dashboard \
+  -p 5001:5001 \
+  -e RADIO_HOST=YOUR_MESH_DEVICE_IP_HERE \
+  --restart unless-stopped \
+  meshy-dashboard
