@@ -59,8 +59,8 @@ cd meshy-dashboard
 
 docker compose up -d --build
 
-Open:
-http://<pi-ip>:5001/ (Dashboard)
+#open in browser
+http://<pi-ip>:5001/ (Meshy-Dashboard)
 http://<pi-ip>:5001/map (Map)
 
 docker-compose.yml`
@@ -79,8 +79,9 @@ services:
     volumes:
       - ./data:/app/data
 
-Open:
+#open in browser
 http://<host-ip>:5001(Meshy-Dasboard)
+http://<pi-ip>:5001/map (Map)
 ---
 
 # One important reality check
