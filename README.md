@@ -46,6 +46,32 @@ pip install -r requirements.txt
 #open in browser
 http://<pi-ip>:5001 (Meshy-Dasboard)
 
+## Docker (optional)
+
+If you prefer Docker:
+
+```bash
+git clone https://github.com/turbo399/meshy-dashboard.git
+cd meshy-dashboard
+
+docker compose up -d --build
+
+Open:
+http://<host-ip>:5001(Meshy-Dasboard)
+
+---
+
+# One important reality check
+If your Pi is **super low power** (Pi Zero / 32-bit), Docker *might* still work, but:
+- it’s heavier than venv + systemd
+- build time is slower
+- RAM pressure is higher
+
+So I’d word it as:
+> “Docker is optional. For the lightest install, use venv + systemd.”
+
+---
+
 ### Meshtastic CLI
 
 Meshy Dashboard uses the Meshtastic CLI.
