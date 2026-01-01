@@ -44,8 +44,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 #open in browser
-http://<pi-ip>:5001/ (Dashboard)
-http://<pi-ip>:5001/map (Map))
+(http://<pi-ip>:5001/) (Dashboard)
+(http://<pi-ip>:5001/map) (Map)
 ## Docker (optional)
 
 If you prefer Docker:
@@ -60,8 +60,8 @@ cd meshy-dashboard
 docker compose up -d --build
 
 Open:
-http://<pi-ip>:5001/ (Dashboard)
-http://<pi-ip>:5001/map (Map)
+(http://<pi-ip>:5001/) (Dashboard)
+(http://<pi-ip>:5001/map) (Map)
 
 docker-compose.yml`
 services:
