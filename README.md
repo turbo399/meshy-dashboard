@@ -98,9 +98,6 @@ services:
     volumes:
       - ./data:/app/data
 ---
-- Add a badge:
-  ```md
-  ![Docker](https://img.shields.io/badge/docker-supported-blue)
 
 # One important reality check
 If your Pi is **super low power** (Pi Zero / 32-bit), Docker *might* still work, but:
