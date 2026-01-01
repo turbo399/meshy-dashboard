@@ -49,9 +49,15 @@ http://<pi-ip>:5001/map (Map)
 ## Docker (optional)
 
 If you prefer Docker:
+## Docker (optional)
 
 “Docker is the easiest on Pi 4 / Pi 5 / home servers. For ultra-low power
 (Pi Zero / 32-bit), venv + systemd is lighter.”
+
+Create a `.env` file in the repo folder:
+
+```bash
+RADIO_HOST=192.168.1.192
 
 ```bash
 git clone https://github.com/turbo399/meshy-dashboard.git
