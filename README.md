@@ -8,6 +8,9 @@
 A desktop-friendly **Meshtastic node list + map** you can run on your LAN (e.g. on a Raspberry Pi gateway).
 It’s basically the same “Nodes + Map” view you see in the phone app — but on a bigger screen, so you don’t need to keep your phone open while working at a desk.
 
+Meshy Dashboard is aimed at low-power gateways and headless systems — it runs directly on the node or gateway and is viewable from any device on the LAN.
+
+It’s designed for ARM, older hardware, and solar/battery setups.
 
 ## Screenshots
 
