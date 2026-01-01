@@ -55,6 +55,7 @@ If you prefer Docker:
 (Pi Zero / 32-bit), venv + systemd is lighter.”
 
 Create a `.env` file in the repo folder:
+cp .env.example .env
 
 ```bash
 RADIO_HOST=192.168.1.192
