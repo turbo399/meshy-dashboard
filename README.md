@@ -12,7 +12,7 @@ It’s basically the same “Nodes + Map” view you see in the phone app — bu
 Meshy Dashboard is aimed at low-power gateways and headless systems — it runs directly on the node or gateway and is viewable from any device on the LAN.
 
 It’s designed for ARM, older hardware, and solar/battery setups.
-
+“Docker is optional — Meshy Dashboard is designed to run comfortably without it.”
 ## Screenshots
 
 **Node table**
