@@ -6,7 +6,7 @@ services:
     ports:
       - "5001:5001"
     environment:
-      RADIO_HOST: "YOUR_IP"
+      RADIO_HOST: ${RADIO_HOST}
       # Optional
       # REFRESH_SECONDS: "200"
     # If your app writes cache files, you can persist them:
