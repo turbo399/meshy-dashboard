@@ -50,7 +50,8 @@ http://<pi-ip>:5001 (Meshy-Dasboard)
 
 If you prefer Docker:
 
-“Docker is the easiest on Pi 4 / Pi 5 / home servers. For ultra-low power (Pi Zero / 32-bit), venv + systemd is lighter.”
+“Docker is the easiest on Pi 4 / Pi 5 / home servers. For ultra-low power
+(Pi Zero / 32-bit), venv + systemd is lighter.”
 
 ```bash
 git clone https://github.com/turbo399/meshy-dashboard.git
