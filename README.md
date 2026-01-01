@@ -49,28 +49,41 @@ http://<pi-ip>:5001/map (Map)
 ## Docker (optional)
 
 If you prefer Docker:
+
 ## Docker (optional)
 
-“Docker is the easiest on Pi 4 / Pi 5 / home servers. For ultra-low power
-(Pi Zero / 32-bit), venv + systemd is lighter.”
+Docker is the easiest option on **Raspberry Pi 4 / Pi 5 / home servers**.
 
-Create a `.env` file in the repo folder:
-cp .env.example .env
+For **ultra-low-power systems** (Pi Zero, 32-bit, battery/solar),
+a Python venv + systemd install is lighter and recommended.
 
-```bash
-RADIO_HOST=192.168.1.192
+---
+
+### 1) Clone the repo
 
 ```bash
 git clone https://github.com/turbo399/meshy-dashboard.git
 cd meshy-dashboard
 
+#### 2 )Create a .env file
+Copy the example file and edit it:
+
+cp .env.example .env
+nano .env
+
+### 3)Start with Docker Compose
+
 docker compose up -d --build
 
-#open in browser
-http://<pi-ip>:5001/ (Meshy-Dashboard)
-http://<pi-ip>:5001/map (Map)
+### 4) Open in your browser
 
-docker-compose.yml`
+Dashboard:
+http://<host-ip>:5001/
+
+Map view:
+http://<host-ip>:5001/map
+
+docker-compose.yml (reference)
 services:
   meshy-dashboard:
     build: .
@@ -82,14 +95,12 @@ services:
       RADIO_HOST: ${RADIO_HOST}
       # Optional
       # REFRESH_SECONDS: "200"
-    # If your app writes cache files, you can persist them:
     volumes:
       - ./data:/app/data
-
-#open in browser
-http://<host-ip>:5001(Meshy-Dasboard)
-http://<pi-ip>:5001/map (Map)
 ---
+- Add a badge:
+  ```md
+  ![Docker](https://img.shields.io/badge/docker-supported-blue)
 
 # One important reality check
 If your Pi is **super low power** (Pi Zero / 32-bit), Docker *might* still work, but:
