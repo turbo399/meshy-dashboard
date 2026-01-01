@@ -4,6 +4,7 @@
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](#requirements)
 [![Flask](https://img.shields.io/badge/Flask-Web%20UI-black.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Raspberry%20Pi%20%7C%20Linux-lightgrey.svg)](#)
+![Docker](https://img.shields.io/badge/docker-supported-blue)
 
 A desktop-friendly **Meshtastic node list + map** you can run on your LAN (e.g. on a Raspberry Pi gateway).
 It’s basically the same “Nodes + Map” view you see in the phone app — but on a bigger screen, so you don’t need to keep your phone open while working at a desk.
