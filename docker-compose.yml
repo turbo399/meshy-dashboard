@@ -1,0 +1,14 @@
+services:
+  meshy-dashboard:
+    build: .
+    container_name: meshy-dashboard
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    environment:
+      RADIO_HOST: "YOUR_IP"
+      # Optional
+      # REFRESH_SECONDS: "200"
+    # If your app writes cache files, you can persist them:
+    volumes:
+      - ./data:/app/data
