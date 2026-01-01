@@ -50,6 +50,8 @@ http://<pi-ip>:5001 (Meshy-Dasboard)
 
 If you prefer Docker:
 
+“Docker is the easiest on Pi 4 / Pi 5 / home servers. For ultra-low power (Pi Zero / 32-bit), venv + systemd is lighter.”
+
 ```bash
 git clone https://github.com/turbo399/meshy-dashboard.git
 cd meshy-dashboard
@@ -59,6 +61,24 @@ docker compose up -d --build
 Open:
 http://<host-ip>:5001(Meshy-Dasboard)
 
+docker-compose.yml`
+services:
+  meshy-dashboard:
+    build: .
+    container_name: meshy-dashboard
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+    environment:
+      RADIO_HOST: "YOUR_IP"
+      # Optional
+      # REFRESH_SECONDS: "200"
+    # If your app writes cache files, you can persist them:
+    volumes:
+      - ./data:/app/data
+
+Open:
+http://<host-ip>:5001(Meshy-Dasboard)
 ---
 
 # One important reality check
@@ -66,10 +86,6 @@ If your Pi is **super low power** (Pi Zero / 32-bit), Docker *might* still work,
 - it’s heavier than venv + systemd
 - build time is slower
 - RAM pressure is higher
-
-So I’d word it as:
-> “Docker is optional. For the lightest install, use venv + systemd.”
-
 ---
 
 ### Meshtastic CLI
